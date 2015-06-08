@@ -6,7 +6,7 @@ class HealthSpider(scrapy.Spider):
     name = "health"
     allowed_domains = ["www.bodybuilding.com"]
     start_urls = (
-        'http://www.bodybuilding.com/',
+        'http://www.www.bodybuilding.com/',
     )
 
     def parse(self, response):
