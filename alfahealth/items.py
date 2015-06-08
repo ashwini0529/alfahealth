@@ -9,8 +9,10 @@ import scrapy
 
 
 class AlfahealthItem(scrapy.Item):
-    item=alfaItem()
     url= scrapy.Field()
+    link= scrapy.Field()
+    #desc= scrapy.Field()
+    title = scrapy.Field()
     name = scrapy.Field()	
     desc = scrapy.Field()
     	
