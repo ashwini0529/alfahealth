@@ -25,4 +25,9 @@ class HealthSpider(scrapy.Spider):
     	item['level']=response.xpath('//*[@id="exerciseDetails"]/span[7]/a/text()').extract()
     	item['force']=response.xpath('//*[@id="exerciseDetails"]/span[8]/a/text()').extract()
     	item['procedure']=response.xpath('//div[@class="guideContent"]/ol/li/text()').extract()
-    	return item
+    	item['caution']=response.xpath('//div[@class="guideContent"]/p[3]/text()').extract()
+    	item['bodyImage']=response.xpath('//div[@class="muscles-worked"]//img[@src]/text()').extract()
+        #Is variation field needed?
+    	#item['variations']=response.xpath('//div[@class="guideContent"]/p[4]/text()').extract()
+    	
+       	return item

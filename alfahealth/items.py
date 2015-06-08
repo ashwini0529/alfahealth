@@ -23,4 +23,8 @@ class AlfahealthItem(scrapy.Item):
    sport=scrapy.Field()
    force=scrapy.Field()
    procedure=scrapy.Field()
+   caution=scrapy.Field()
+   bodyImage=scrapy.Field()
+   #is Variation needed? 
+   #variations=scrapy.Field()
    pass
