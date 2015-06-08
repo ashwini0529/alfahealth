@@ -9,11 +9,18 @@ import scrapy
 
 
 class AlfahealthItem(scrapy.Item):
-    url= scrapy.Field()
-    link= scrapy.Field()
-    #desc= scrapy.Field()
-    title = scrapy.Field()
-    name = scrapy.Field()	
-    desc = scrapy.Field()
-    	
-    pass
+   url = scrapy.Field()
+   size = scrapy.Field()
+   name = scrapy.Field()
+   also_known_as=scrapy.Field()
+   #video_link=scrapy.Field()
+   exercise_type= scrapy.Field()
+   main_muscle_worked=scrapy.Field()
+   other_muscles=scrapy.Field()
+   equipment = scrapy.Field()
+   mechanics_type=scrapy.Field()
+   level=scrapy.Field()
+   sport=scrapy.Field()
+   force=scrapy.Field()
+   procedure=scrapy.Field()
+   pass

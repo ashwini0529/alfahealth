@@ -12,10 +12,17 @@ class HealthSpider(scrapy.Spider):
     ]
 
     def parse(self, response):
-       for sel in response.xpath('//ul/li'):
-       	item = AlfahealthItem()
-       	item['title']=sel.xpath('a/text()').extract()
-       	item['link'] = sel.xpath('a/@href').extract()
-       	item['desc'] = sel.xpath('text()').extract()
-        yield item
-
+    	item = AlfahealthItem()
+    	item['name']=response.xpath('//*[@id="exerciseDetails"]/h1/text()').extract()
+    	item['also_known_as']=response.xpath('//*[@id="exerciseDetails"]/p/label/text()').extract()
+    	#item['video_link']=response.xpath('//*[@id="maleVideo"]/video/source/text()').extract()
+    	item['exercise_type']=response.xpath('//*[@id="exerciseDetails"]/span[1]/a/text()').extract()
+    	item['main_muscle_worked']=response.xpath('//*[@id="exerciseDetails"]/span[2]/a/text()').extract()
+    	item['other_muscles']=response.xpath('//*[@id="exerciseDetails"]/span[3]/a/text()').extract()
+    	item['equipment']=response.xpath('//*[@id="exerciseDetails"]/span[4]/a/text()').extract()
+    	item['mechanics_type']=response.xpath('//*[@id="exerciseDetails"]/span[5]/a/text()').extract()
+    	item['level']=response.xpath('//*[@id="exerciseDetails"]/span[6]/a/text()').extract()
+    	item['level']=response.xpath('//*[@id="exerciseDetails"]/span[7]/a/text()').extract()
+    	item['force']=response.xpath('//*[@id="exerciseDetails"]/span[8]/a/text()').extract()
+    	item['procedure']=response.xpath('//div[@class="guideContent"]/ol/li/text()').extract()
+    	return item
