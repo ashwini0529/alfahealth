@@ -9,9 +9,6 @@ import scrapy
 
 
 class AlfahealthItem(scrapy.Item):
-    item=alfaItem()
-    url= scrapy.Field()
-    name = scrapy.Field()	
-    desc = scrapy.Field()
-    	
+    # define the fields for your item here like:
+    # name = scrapy.Field()
     pass
