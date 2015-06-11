@@ -28,3 +28,17 @@ class AlfahealthItem(scrapy.Item):
    #is Variation needed? 
    #variations=scrapy.Field()
    pass
+
+class AlfahealthDiet(scrapy.Item):
+  # url = scrapy.Field()
+   dietName = scrapy.Field()
+   dietCategory = scrapy.Field()
+  # dietPlanLength = scrapy.Field()
+   pass
+
+class AlfahealthCaloriesBurned(scrapy.Item):
+  # url = scrapy.Field()
+   exerciseName = scrapy.Field()
+   caloriesBurned = scrapy.Field()
+  # dietPlanLength = scrapy.Field()
+   pass
