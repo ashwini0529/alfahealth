@@ -16,21 +16,13 @@ class HealthSpider(scrapy.Spider):
     def parse(self, response):
     	item = AlfahealthDiet()
     	item['dietName']=response.xpath('///div[@class="pageTitle"]/h1/text()').extract()
-    	item['dietCategory']=response.xpath(('//div[@class="viewSaveDietData"]//[text()="Diet Category"]/span[@class = "Answer"]/text()').extract())
-    	'''
-    	item['also_known_as']=response.xpath('//*[@id="exerciseDetails"]/p/label/text()').extract()
-    	#item['video_link']=response.xpath('//*[@id="maleVideo"]/video/source/text()').extract()
-    	item['exercise_type']=response.xpath('//*[@id="exerciseDetails"]/span[1]/a/text()').extract()
-    	item['main_muscle_worked']=response.xpath('//*[@id="exerciseDetails"]/span[2]/a/text()').extract()
-    	item['other_muscles']=response.xpath('//*[@id="exerciseDetails"]/span[3]/a/text()').extract()
-    	item['equipment']=response.xpath('//*[@id="exerciseDetails"]/span[4]/a/text()').extract()
-    	item['mechanics_type']=response.xpath('//*[@id="exerciseDetails"]/span[5]/a/text()').extract()
-    	item['level']=response.xpath('//*[@id="exerciseDetails"]/span[6]/a/text()').extract()
-    	item['level']=response.xpath('//*[@id="exerciseDetails"]/span[7]/a/text()').extract()
-    	item['procedure']=response.xpath('//div[@class="guideContent"]/ol/li/text()').extract()
-    	item['caution']=response.xpath('//div[@class="guideContent"]/p[3]/text()').extract()
-    	item['bodyImage']=response.xpath('//div[@class="muscles-worked"]//img[@src]/text()').extract()
-        #Is variation field needed?
-    	#item['variations']=response.xpath('//div[@class="guideContent"]/p[4]/text()').extract()
-    	'''
-       	return item
+    	item['dietCategory']=response.xpath('//div[@class="viewSaveDietData"][5]/span/text()').extract()
+        item['dietPlanLength']=response.xpath('//div[@class="viewSaveDietData"][6]/span/text()').extract()
+        item['mealsPerDay']=response.xpath('//div[@class="viewSaveDietData"][7]/span/text()').extract()
+        item['targetGender']=response.xpath('//div[@class="viewSaveDietData"][8]/span/text()').extract()
+        item['weightGoal']=response.xpath('//div[@class="viewSaveDietData"][9]/span/text()').extract()
+        item['cookingDifficulty']=response.xpath('//div[@class="viewSaveDietData"][10]/span/text()').extract()
+        item['tags']=response.xpath('//div[@class="viewSaveDietData"][11]/span/text()').extract()
+       	item['description'] = response.xpath('//div[@id="custDietViewUC_upnlView"]/div[2]/div[5]/div/text()').extract()
+        item["dietOptions"] = response.xpath('//div[@id="custDietViewUC_upnlView"]/div[2]/div[9]/div/text()')
+        return item

@@ -1,1 +1,11 @@
-[{"dietName": ["FitClick Diabetes Diet"]}]
+[{
+ "dietName": ["FitClick Diabetes Diet"], 
+ "mealsPerDay": ["3 meals, 4 meals, 5 meals, 6 meals"], 
+ "description": ["\r\n\tFor those with diabetes or pre-diabetes, this is a healthy low fat, high fiber diet with ample fruit, vegetable and whole grain servings.\u00a0", "\r\n\t\u00a0", "\r\n\tIMPORTANT: This diet is not a substitute for any diabetes treatment plan you currently follow. Please consult your physician prior to using this diet and periodically during your use of this diet as directed by your physician.\u00a0"],
+ "cookingDifficulty": ["Easy"], 
+ "tags": ["52.5:22.5:25 Macronutrient Ratio"], 
+ "dietPlanLength": ["Ongoing"], 
+ "weightGoal": ["Lose weight, Maintain weight, Gain weight"],
+ "targetGender": ["Women and men"], 
+ "dietCategory": ["Balanced"]
+ }]

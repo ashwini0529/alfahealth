@@ -33,12 +33,25 @@ class AlfahealthDiet(scrapy.Item):
   # url = scrapy.Field()
    dietName = scrapy.Field()
    dietCategory = scrapy.Field()
-  # dietPlanLength = scrapy.Field()
+   dietPlanLength = scrapy.Field()
+   mealsPerDay= scrapy.Field()
+   targetGender = scrapy.Field()
+   weightGoal = scrapy.Field()
+   cookingDifficulty = scrapy.Field()
+   tags = scrapy.Field()
+   description = scrapy.Field()
+   dietOptions = scrapy.Field()
    pass
 
 class AlfahealthCaloriesBurned(scrapy.Item):
   # url = scrapy.Field()
    exerciseName = scrapy.Field()
    caloriesBurned = scrapy.Field()
-  # dietPlanLength = scrapy.Field()
    pass
+  # dietPlanLength = scrapy.Field()
+class caloriesBurnedInExercise(scrapy.Item):
+  exerciseName1 = scrapy.Field()
+  exerciseName2 = scrapy.Field()
+  caloriesBurned1 = scrapy.Field()
+  caloriesBurned2 = scrapy.Field()
+  pass

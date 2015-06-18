@@ -16,7 +16,7 @@ class HealthSpider(scrapy.Spider):
     def parse(self, response):
     	item = AlfahealthCaloriesBurned()
         item['exerciseName']=response.xpath('//div[@class="pageTitle"]/h1/text()').extract()
-    	item['caloriesBurned']=response.xpath('(//*[@id="main_content"]/div[4]/text()').extract()
+    	item['caloriesBurned']=response.xpath('(//*[@id="main_content"]/text()').extract()
     	'''
     	item['also_known_as']=response.xpath('//*[@id="exerciseDetails"]/p/label/text()').extract()
     	#item['video_link']=response.xpath('//*[@id="maleVideo"]/video/source/text()').extract()
