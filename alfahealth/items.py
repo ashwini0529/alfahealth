@@ -55,3 +55,19 @@ class caloriesBurnedInExercise(scrapy.Item):
   caloriesBurned1 = scrapy.Field()
   caloriesBurned2 = scrapy.Field()
   pass
+
+
+class getFoods(scrapy.Item):
+  foodName = scrapy.Field()
+  servingSize = scrapy.Field()
+  pass
+class getExercise(scrapy.Item):
+  exerciseName = scrapy.Field()
+  procedure = scrapy.Field()
+  muscle = scrapy.Field()
+  detailed_muscle = scrapy.Field()
+  other_muscle_group= scrapy.Field()
+  type = scrapy.Field()
+  mechanics = scrapy.Field()
+  equipments = scrapy.Field()
+  difficulty = scrapy.Field()
