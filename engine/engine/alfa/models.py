@@ -7,13 +7,15 @@ class Bmi(models.Model):
 	bmi = models.IntegerField(default = 0)
 	pub_date = models.DateTimeField('date published')
 	desired_id = models.IntegerField(default = 0) # This would be the wannabe avatar id.. that he choses at the time of startup
-	def __unicode__(self):              # __unicode__ on Python 2
-        return  u % (self.user_id, self.bmi,self.pub_date,self.desired_id)
+	def was_published_recently(self):
+		return self.pub_date >= timezone.now() - datetime.timedelta(days=1)
 class exerciseList(models.Model):
 	exercise_id = models.IntegerField()
 	exercise_name = models.CharField(max_length = 256)
 	exercise_for = models.CharField(max_length = 256) # Which bodypart
-
+	
+	def __unicode__(self):
+		return u'%s %s' % (self.exercise_name, self.exercise_for)
 
 
 
