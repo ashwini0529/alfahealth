@@ -61,6 +61,7 @@ class getFoods(scrapy.Item):
   foodName = scrapy.Field()
   servingSize = scrapy.Field()
   pass
+
 class getExercise(scrapy.Item):
   exerciseName = scrapy.Field()
   procedure = scrapy.Field()
@@ -71,3 +72,14 @@ class getExercise(scrapy.Item):
   mechanics = scrapy.Field()
   equipments = scrapy.Field()
   difficulty = scrapy.Field()
+
+#get food data
+
+class Food(scrapy.Item):
+  foodName=scrapy.Field()
+  servingSize=scrapy.Field()
+  calories=scrapy.Field()
+  carbohydrates=scrapy.Field()
+  protiens=scrapy.Field()
+  fat=scrapy.Field()
+  pass
